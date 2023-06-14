@@ -1,0 +1,120 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="report">
+      <h2 data-cy="reportDetailsHeading"><span jhiTranslate="coalDetectorApp.report.detail.title">Report</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ report.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.coalConfId">Coal Conf Id</span></dt>
+        <dd>
+          <span>{{ report.coalConfId }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.phone">Phone</span></dt>
+        <dd>
+          <span>{{ report.phone }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.coalType">Coal Type</span></dt>
+        <dd>
+          <span>{{ report.coalType }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.checkDate">Check Date</span></dt>
+        <dd>
+          <span>{{ report.checkDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_M4">Up M 4</span></dt>
+        <dd>
+          <span>{{ report.up_M4 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_A4">Up A 4</span></dt>
+        <dd>
+          <span>{{ report.up_A4 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_V4">Up V 4</span></dt>
+        <dd>
+          <span>{{ report.up_V4 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_S">Up S</span></dt>
+        <dd>
+          <span>{{ report.up_S }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_C">Up C</span></dt>
+        <dd>
+          <span>{{ report.up_C }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.report1">Report 1</span></dt>
+        <dd>
+          <span>{{ report.report1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.report2">Report 2</span></dt>
+        <dd>
+          <span>{{ report.report2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.report3">Report 3</span></dt>
+        <dd>
+          <span>{{ report.report3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.eggCone2">Egg Cone 2</span></dt>
+        <dd>
+          <span>{{ report.eggCone2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_Aar">Up Aar</span></dt>
+        <dd>
+          <span>{{ report.up_Aar }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_Ad">Up Ad</span></dt>
+        <dd>
+          <span>{{ report.up_Ad }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_Var">Up Var</span></dt>
+        <dd>
+          <span>{{ report.up_Var }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_Vd">Up Vd</span></dt>
+        <dd>
+          <span>{{ report.up_Vd }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_Vdaf">Up Vdaf</span></dt>
+        <dd>
+          <span>{{ report.up_Vdaf }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.up_H">Up H</span></dt>
+        <dd>
+          <span>{{ report.up_H }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.slime">Slime</span></dt>
+        <dd>
+          <span>{{ report.slime }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.cleanCoal">Clean Coal</span></dt>
+        <dd>
+          <span>{{ report.cleanCoal }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.ganGue">Gan Gue</span></dt>
+        <dd>
+          <span>{{ report.ganGue }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.report.note">Note</span></dt>
+        <dd>
+          <span>{{ report.note }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/report', report.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

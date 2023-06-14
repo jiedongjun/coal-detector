@@ -1,0 +1,148 @@
+{
+  "fields": [
+    {
+      "fieldName": "project",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "send",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "soft2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "soft3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payStatus",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "note1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "note2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "coalType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "up_M",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_M1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_M2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_M3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_M4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_A",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_A1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_A2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_A3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_A4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_V",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_V1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_V2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_V3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_V4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "low_m",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "low_m1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "low_m2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "low_m3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "low_m4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "eggCone1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eggCone2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eggCone3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "price2",
+      "fieldType": "Float"
+    }
+  ],
+  "relationships": [],
+  "service": "serviceClass",
+  "dto": "no",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "pagination",
+  "name": "CoalConf",
+  "changelogDate": "20230417142955"
+}

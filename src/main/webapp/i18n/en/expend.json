@@ -1,0 +1,28 @@
+{
+  "coalDetectorApp": {
+    "expend": {
+      "home": {
+        "title": "Expends",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Expend",
+        "createOrEditLabel": "Create or edit a Expend",
+        "notFound": "No Expends found"
+      },
+      "created": "A new Expend is created with identifier {{ param }}",
+      "updated": "A Expend is updated with identifier {{ param }}",
+      "deleted": "A Expend is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Expend {{ id }}?"
+      },
+      "detail": {
+        "title": "Expend"
+      },
+      "id": "ID",
+      "payTime": "Pay Time",
+      "amount": "Amount",
+      "direction": "Direction",
+      "payWay": "Pay Way",
+      "writer": "Writer"
+    }
+  }
+}

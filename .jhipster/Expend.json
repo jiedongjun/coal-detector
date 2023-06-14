@@ -1,0 +1,32 @@
+{
+  "fields": [
+    {
+      "fieldName": "payTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "direction",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "payWay",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "writer",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "service": "serviceClass",
+  "dto": "no",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "pagination",
+  "name": "Expend",
+  "changelogDate": "20230605134741"
+}

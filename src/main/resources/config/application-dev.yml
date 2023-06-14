@@ -32,15 +32,16 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/coaldetector;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:file:./h2db/coaldetector;DB_CLOSE_DELAY=-1
     username: coalDetector
-    password:
+    password: coalDetector.
     hikari:
       poolName: Hikari
       auto-commit: false
   h2:
     console:
-      enabled: false
+      enabled: true
+      path: /h2-console
   jpa:
     database-platform: tech.jhipster.domain.util.FixedH2Dialect
   liquibase:
@@ -105,4 +106,7 @@ jhipster:
 # https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
-# application:
+application:
+  report-template-path: file:./report-template/
+  key-path: file:./secret.key
+  report-path: file:./report

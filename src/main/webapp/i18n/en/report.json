@@ -1,0 +1,46 @@
+{
+  "coalDetectorApp": {
+    "report": {
+      "home": {
+        "title": "Reports",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Report",
+        "createOrEditLabel": "Create or edit a Report",
+        "notFound": "No Reports found"
+      },
+      "created": "A new Report is created with identifier {{ param }}",
+      "updated": "A Report is updated with identifier {{ param }}",
+      "deleted": "A Report is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Report {{ id }}?"
+      },
+      "detail": {
+        "title": "Report"
+      },
+      "id": "ID",
+      "coalConfId": "Coal Conf Id",
+      "phone": "Phone",
+      "coalType": "Coal Type",
+      "checkDate": "Check Date",
+      "up_M4": "Up M 4",
+      "up_A4": "Up A 4",
+      "up_V4": "Up V 4",
+      "up_S": "Up S",
+      "up_C": "Up C",
+      "report1": "Report 1",
+      "report2": "Report 2",
+      "report3": "Report 3",
+      "eggCone2": "Egg Cone 2",
+      "up_Aar": "Up Aar",
+      "up_Ad": "Up Ad",
+      "up_Var": "Up Var",
+      "up_Vd": "Up Vd",
+      "up_Vdaf": "Up Vdaf",
+      "up_H": "Up H",
+      "slime": "Slime",
+      "cleanCoal": "Clean Coal",
+      "ganGue": "Gan Gue",
+      "note": "Note"
+    }
+  }
+}

@@ -95,6 +95,7 @@
   },
   "defaultProject": "coal-detector",
   "cli": {
+    "analytics": false,
     "packageManager": "npm"
   }
 }

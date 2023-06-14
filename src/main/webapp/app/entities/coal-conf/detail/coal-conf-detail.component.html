@@ -1,0 +1,164 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="coalConf">
+      <h2 data-cy="coalConfDetailsHeading"><span jhiTranslate="coalDetectorApp.coalConf.detail.title">Coal Conf</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ coalConf.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.project">Project</span></dt>
+        <dd>
+          <span>{{ coalConf.project }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.phone">Phone</span></dt>
+        <dd>
+          <span>{{ coalConf.phone }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.send">Send</span></dt>
+        <dd>
+          <span>{{ coalConf.send }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.soft2">Soft 2</span></dt>
+        <dd>
+          <span>{{ coalConf.soft2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.soft3">Soft 3</span></dt>
+        <dd>
+          <span>{{ coalConf.soft3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.payStatus">Pay Status</span></dt>
+        <dd>
+          <span>{{ coalConf.payStatus }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.note1">Note 1</span></dt>
+        <dd>
+          <span>{{ coalConf.note1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.note2">Note 2</span></dt>
+        <dd>
+          <span>{{ coalConf.note2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.coalType">Coal Type</span></dt>
+        <dd>
+          <span>{{ coalConf.coalType }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_M">Up M</span></dt>
+        <dd>
+          <span>{{ coalConf.up_M }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_M1">Up M 1</span></dt>
+        <dd>
+          <span>{{ coalConf.up_M1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_M2">Up M 2</span></dt>
+        <dd>
+          <span>{{ coalConf.up_M2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_M3">Up M 3</span></dt>
+        <dd>
+          <span>{{ coalConf.up_M3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_M4">Up M 4</span></dt>
+        <dd>
+          <span>{{ coalConf.up_M4 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_A">Up A</span></dt>
+        <dd>
+          <span>{{ coalConf.up_A }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_A1">Up A 1</span></dt>
+        <dd>
+          <span>{{ coalConf.up_A1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_A2">Up A 2</span></dt>
+        <dd>
+          <span>{{ coalConf.up_A2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_A3">Up A 3</span></dt>
+        <dd>
+          <span>{{ coalConf.up_A3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_A4">Up A 4</span></dt>
+        <dd>
+          <span>{{ coalConf.up_A4 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_V">Up V</span></dt>
+        <dd>
+          <span>{{ coalConf.up_V }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_V1">Up V 1</span></dt>
+        <dd>
+          <span>{{ coalConf.up_V1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_V2">Up V 2</span></dt>
+        <dd>
+          <span>{{ coalConf.up_V2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_V3">Up V 3</span></dt>
+        <dd>
+          <span>{{ coalConf.up_V3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.up_V4">Up V 4</span></dt>
+        <dd>
+          <span>{{ coalConf.up_V4 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.low_m">Low M</span></dt>
+        <dd>
+          <span>{{ coalConf.low_m }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.low_m1">Low M 1</span></dt>
+        <dd>
+          <span>{{ coalConf.low_m1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.low_m2">Low M 2</span></dt>
+        <dd>
+          <span>{{ coalConf.low_m2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.low_m3">Low M 3</span></dt>
+        <dd>
+          <span>{{ coalConf.low_m3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.low_m4">Low M 4</span></dt>
+        <dd>
+          <span>{{ coalConf.low_m4 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.eggCone1">Egg Cone 1</span></dt>
+        <dd>
+          <span>{{ coalConf.eggCone1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.eggCone2">Egg Cone 2</span></dt>
+        <dd>
+          <span>{{ coalConf.eggCone2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.eggCone3">Egg Cone 3</span></dt>
+        <dd>
+          <span>{{ coalConf.eggCone3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.price1">Price 1</span></dt>
+        <dd>
+          <span>{{ coalConf.price1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="coalDetectorApp.coalConf.price2">Price 2</span></dt>
+        <dd>
+          <span>{{ coalConf.price2 }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/coal-conf', coalConf.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

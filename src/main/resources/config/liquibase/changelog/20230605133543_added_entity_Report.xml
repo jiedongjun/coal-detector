@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity Report.
+    -->
+    <changeSet id="20230605133543-1" author="jhipster">
+        <createTable tableName="report">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="coal_conf_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <column name="phone" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="coal_type" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="check_date" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_m_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_a_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_v_4" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_s" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_c" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="report_1" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="report_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="report_3" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="egg_cone_2" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_aar" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_ad" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_var" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_vd" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_vdaf" type="${floatType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="up_h" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="slime" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="clean_coal" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="gan_gue" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="note" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp"/>
+            <column name="last_modified_by" type="varchar(50)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20230605133543-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/report.csv"
+                  separator=";"
+                  tableName="report">
+            <column name="id" type="numeric"/>
+            <column name="coal_conf_id" type="numeric"/>
+            <column name="phone" type="string"/>
+            <column name="coal_type" type="string"/>
+            <column name="check_date" type="string"/>
+            <column name="up_m_4" type="numeric"/>
+            <column name="up_a_4" type="numeric"/>
+            <column name="up_v_4" type="numeric"/>
+            <column name="up_s" type="numeric"/>
+            <column name="up_c" type="numeric"/>
+            <column name="report_1" type="numeric"/>
+            <column name="report_2" type="numeric"/>
+            <column name="report_3" type="numeric"/>
+            <column name="egg_cone_2" type="numeric"/>
+            <column name="up_aar" type="numeric"/>
+            <column name="up_ad" type="numeric"/>
+            <column name="up_var" type="numeric"/>
+            <column name="up_vd" type="numeric"/>
+            <column name="up_vdaf" type="numeric"/>
+            <column name="up_h" type="string"/>
+            <column name="slime" type="string"/>
+            <column name="clean_coal" type="string"/>
+            <column name="gan_gue" type="string"/>
+            <column name="note" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

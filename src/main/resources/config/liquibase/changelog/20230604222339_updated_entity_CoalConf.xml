@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity CoalConf.
+    -->
+    <changeSet id="20230604222339-1" author="jhipster">
+        <addColumn tableName="coal_conf">
+            <column name="up_Aar" type="numeric"/>
+            <column name="up_Ad" type="numeric"/>
+            <column name="up_Var" type="numeric"/>
+            <column name="up_Vd" type="numeric"/>
+            <column name="up_Vdaf" type="numeric"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

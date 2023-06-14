@@ -1,0 +1,204 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-coal-conf-heading" data-cy="CoalConfCreateUpdateHeading" jhiTranslate="coalDetectorApp.coalConf.home.createOrEditLabel">
+        Create or edit a Coal Conf
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-control-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.project" for="field_project">Project</label>
+          <input type="text" class="form-control" name="project" id="field_project" data-cy="project" formControlName="project" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.phone" for="field_phone">Phone</label>
+          <input type="text" class="form-control" name="phone" id="field_phone" data-cy="phone" formControlName="phone" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.send" for="field_send">Send</label>
+          <input type="number" class="form-control" name="send" id="field_send" data-cy="send" formControlName="send" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.soft2" for="field_soft2">Soft 2</label>
+          <input type="text" class="form-control" name="soft2" id="field_soft2" data-cy="soft2" formControlName="soft2" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.soft3" for="field_soft3">Soft 3</label>
+          <input type="text" class="form-control" name="soft3" id="field_soft3" data-cy="soft3" formControlName="soft3" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.payStatus" for="field_payStatus">Pay Status</label>
+          <input type="number" class="form-control" name="payStatus" id="field_payStatus" data-cy="payStatus" formControlName="payStatus" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.note1" for="field_note1">Note 1</label>
+          <input type="text" class="form-control" name="note1" id="field_note1" data-cy="note1" formControlName="note1" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.note2" for="field_note2">Note 2</label>
+          <input type="text" class="form-control" name="note2" id="field_note2" data-cy="note2" formControlName="note2" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.coalType" for="field_coalType">Coal Type</label>
+          <input type="text" class="form-control" name="coalType" id="field_coalType" data-cy="coalType" formControlName="coalType" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_M" for="field_up_M">Up M</label>
+          <input type="number" class="form-control" name="up_M" id="field_up_M" data-cy="up_M" formControlName="up_M" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_M1" for="field_up_M1">Up M 1</label>
+          <input type="number" class="form-control" name="up_M1" id="field_up_M1" data-cy="up_M1" formControlName="up_M1" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_M2" for="field_up_M2">Up M 2</label>
+          <input type="number" class="form-control" name="up_M2" id="field_up_M2" data-cy="up_M2" formControlName="up_M2" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_M3" for="field_up_M3">Up M 3</label>
+          <input type="number" class="form-control" name="up_M3" id="field_up_M3" data-cy="up_M3" formControlName="up_M3" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_M4" for="field_up_M4">Up M 4</label>
+          <input type="number" class="form-control" name="up_M4" id="field_up_M4" data-cy="up_M4" formControlName="up_M4" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_A" for="field_up_A">Up A</label>
+          <input type="number" class="form-control" name="up_A" id="field_up_A" data-cy="up_A" formControlName="up_A" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_A1" for="field_up_A1">Up A 1</label>
+          <input type="number" class="form-control" name="up_A1" id="field_up_A1" data-cy="up_A1" formControlName="up_A1" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_A2" for="field_up_A2">Up A 2</label>
+          <input type="number" class="form-control" name="up_A2" id="field_up_A2" data-cy="up_A2" formControlName="up_A2" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_A3" for="field_up_A3">Up A 3</label>
+          <input type="number" class="form-control" name="up_A3" id="field_up_A3" data-cy="up_A3" formControlName="up_A3" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_A4" for="field_up_A4">Up A 4</label>
+          <input type="number" class="form-control" name="up_A4" id="field_up_A4" data-cy="up_A4" formControlName="up_A4" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_V" for="field_up_V">Up V</label>
+          <input type="number" class="form-control" name="up_V" id="field_up_V" data-cy="up_V" formControlName="up_V" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_V1" for="field_up_V1">Up V 1</label>
+          <input type="number" class="form-control" name="up_V1" id="field_up_V1" data-cy="up_V1" formControlName="up_V1" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_V2" for="field_up_V2">Up V 2</label>
+          <input type="number" class="form-control" name="up_V2" id="field_up_V2" data-cy="up_V2" formControlName="up_V2" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_V3" for="field_up_V3">Up V 3</label>
+          <input type="number" class="form-control" name="up_V3" id="field_up_V3" data-cy="up_V3" formControlName="up_V3" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.up_V4" for="field_up_V4">Up V 4</label>
+          <input type="number" class="form-control" name="up_V4" id="field_up_V4" data-cy="up_V4" formControlName="up_V4" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.low_m" for="field_low_m">Low M</label>
+          <input type="number" class="form-control" name="low_m" id="field_low_m" data-cy="low_m" formControlName="low_m" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.low_m1" for="field_low_m1">Low M 1</label>
+          <input type="number" class="form-control" name="low_m1" id="field_low_m1" data-cy="low_m1" formControlName="low_m1" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.low_m2" for="field_low_m2">Low M 2</label>
+          <input type="number" class="form-control" name="low_m2" id="field_low_m2" data-cy="low_m2" formControlName="low_m2" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.low_m3" for="field_low_m3">Low M 3</label>
+          <input type="number" class="form-control" name="low_m3" id="field_low_m3" data-cy="low_m3" formControlName="low_m3" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.low_m4" for="field_low_m4">Low M 4</label>
+          <input type="number" class="form-control" name="low_m4" id="field_low_m4" data-cy="low_m4" formControlName="low_m4" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.eggCone1" for="field_eggCone1">Egg Cone 1</label>
+          <input type="text" class="form-control" name="eggCone1" id="field_eggCone1" data-cy="eggCone1" formControlName="eggCone1" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.eggCone2" for="field_eggCone2">Egg Cone 2</label>
+          <input type="text" class="form-control" name="eggCone2" id="field_eggCone2" data-cy="eggCone2" formControlName="eggCone2" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.eggCone3" for="field_eggCone3">Egg Cone 3</label>
+          <input type="text" class="form-control" name="eggCone3" id="field_eggCone3" data-cy="eggCone3" formControlName="eggCone3" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.price1" for="field_price1">Price 1</label>
+          <input type="number" class="form-control" name="price1" id="field_price1" data-cy="price1" formControlName="price1" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-control-label" jhiTranslate="coalDetectorApp.coalConf.price2" for="field_price2">Price 2</label>
+          <input type="number" class="form-control" name="price2" id="field_price2" data-cy="price2" formControlName="price2" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

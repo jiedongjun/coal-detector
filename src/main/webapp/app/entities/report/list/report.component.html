@@ -1,0 +1,168 @@
+<div>
+  <h2 id="page-heading" data-cy="ReportHeading">
+    <span jhiTranslate="coalDetectorApp.report.home.title">Reports</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="coalDetectorApp.report.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-report"
+        [routerLink]="['/report/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="coalDetectorApp.report.home.createLabel"> Create a new Report </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="reports?.length === 0">
+    <span jhiTranslate="coalDetectorApp.report.home.notFound">No reports found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="reports && reports.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="coalConfId">
+            <span jhiTranslate="coalDetectorApp.report.coalConfId">Coal Conf Id</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="phone">
+            <span jhiTranslate="coalDetectorApp.report.phone">Phone</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="coalType">
+            <span jhiTranslate="coalDetectorApp.report.coalType">Coal Type</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="checkDate">
+            <span jhiTranslate="coalDetectorApp.report.checkDate">Check Date</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_M4">
+            <span jhiTranslate="coalDetectorApp.report.up_M4">Up M 4</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_A4">
+            <span jhiTranslate="coalDetectorApp.report.up_A4">Up A 4</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_V4">
+            <span jhiTranslate="coalDetectorApp.report.up_V4">Up V 4</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_S"><span jhiTranslate="coalDetectorApp.report.up_S">Up S</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="up_C"><span jhiTranslate="coalDetectorApp.report.up_C">Up C</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="report1">
+            <span jhiTranslate="coalDetectorApp.report.report1">Report 1</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="report2">
+            <span jhiTranslate="coalDetectorApp.report.report2">Report 2</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="report3">
+            <span jhiTranslate="coalDetectorApp.report.report3">Report 3</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="eggCone2">
+            <span jhiTranslate="coalDetectorApp.report.eggCone2">Egg Cone 2</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_Aar">
+            <span jhiTranslate="coalDetectorApp.report.up_Aar">Up Aar</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_Ad">
+            <span jhiTranslate="coalDetectorApp.report.up_Ad">Up Ad</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_Var">
+            <span jhiTranslate="coalDetectorApp.report.up_Var">Up Var</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_Vd">
+            <span jhiTranslate="coalDetectorApp.report.up_Vd">Up Vd</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_Vdaf">
+            <span jhiTranslate="coalDetectorApp.report.up_Vdaf">Up Vdaf</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="up_H"><span jhiTranslate="coalDetectorApp.report.up_H">Up H</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="slime">
+            <span jhiTranslate="coalDetectorApp.report.slime">Slime</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="cleanCoal">
+            <span jhiTranslate="coalDetectorApp.report.cleanCoal">Clean Coal</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="ganGue">
+            <span jhiTranslate="coalDetectorApp.report.ganGue">Gan Gue</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="note"><span jhiTranslate="coalDetectorApp.report.note">Note</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of reports; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/report', report.id, 'view']">{{ report.id }}</a>
+          </td>
+          <td>{{ report.coalConfId }}</td>
+          <td>{{ report.phone }}</td>
+          <td>{{ report.coalType }}</td>
+          <td>{{ report.checkDate }}</td>
+          <td>{{ report.up_M4 }}</td>
+          <td>{{ report.up_A4 }}</td>
+          <td>{{ report.up_V4 }}</td>
+          <td>{{ report.up_S }}</td>
+          <td>{{ report.up_C }}</td>
+          <td>{{ report.report1 }}</td>
+          <td>{{ report.report2 }}</td>
+          <td>{{ report.report3 }}</td>
+          <td>{{ report.eggCone2 }}</td>
+          <td>{{ report.up_Aar }}</td>
+          <td>{{ report.up_Ad }}</td>
+          <td>{{ report.up_Var }}</td>
+          <td>{{ report.up_Vd }}</td>
+          <td>{{ report.up_Vdaf }}</td>
+          <td>{{ report.up_H }}</td>
+          <td>{{ report.slime }}</td>
+          <td>{{ report.cleanCoal }}</td>
+          <td>{{ report.ganGue }}</td>
+          <td>{{ report.note }}</td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button type="submit" [routerLink]="['/report', report.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button type="submit" [routerLink]="['/report', report.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(report)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="reports && reports.length > 0">
+    <div class="row justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="row justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

@@ -48,6 +48,9 @@ public class CacheConfiguration {
             createCache(cm, com.coal.domain.User.class.getName());
             createCache(cm, com.coal.domain.Authority.class.getName());
             createCache(cm, com.coal.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.coal.domain.CoalConf.class.getName());
+            createCache(cm, com.coal.domain.Report.class.getName());
+            createCache(cm, com.coal.domain.Expend.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

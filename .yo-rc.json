@@ -41,6 +41,8 @@
     "jwtSecretKey": "NWRjNmExNmQ1MjZiNjAxY2YyOTZhYmQxN2JhMDQ3ZmI0ZjZlNTM5NGRjNmI3ODgwNjA0ZWU4NWExMTk5YWNjZDVlYmFmODljNjMzODJlNjIzNzQwNGQ1YzkzN2I5M2FmNjM4Nzk1MWQ3OTFiNjFiZWQyYzM5ODRjZWZhNTc4N2I=",
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
-    "languages": ["en"]
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1685972861000,
+    "entities": ["CoalConf", "Report", "Expend"]
   }
 }

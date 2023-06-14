@@ -1,0 +1,104 @@
+{
+  "fields": [
+    {
+      "fieldName": "coalConfId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "coalType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "checkDate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "up_M4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_A4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_V4",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_S",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_C",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "report1",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "report2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "report3",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "eggCone2",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_Aar",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_Ad",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_Var",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_Vd",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_Vdaf",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "up_H",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "slime",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cleanCoal",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ganGue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "note",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "service": "serviceClass",
+  "dto": "no",
+  "jpaMetamodelFiltering": false,
+  "readOnly": false,
+  "pagination": "pagination",
+  "name": "Report",
+  "changelogDate": "20230605133543"
+}

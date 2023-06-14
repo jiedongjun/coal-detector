@@ -1,0 +1,57 @@
+{
+  "coalDetectorApp": {
+    "coalConf": {
+      "home": {
+        "title": "Coal Confs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Coal Conf",
+        "createOrEditLabel": "Create or edit a Coal Conf",
+        "notFound": "No Coal Confs found"
+      },
+      "created": "A new Coal Conf is created with identifier {{ param }}",
+      "updated": "A Coal Conf is updated with identifier {{ param }}",
+      "deleted": "A Coal Conf is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Coal Conf {{ id }}?"
+      },
+      "detail": {
+        "title": "Coal Conf"
+      },
+      "id": "ID",
+      "project": "Project",
+      "phone": "Phone",
+      "send": "Send",
+      "soft2": "Soft 2",
+      "soft3": "Soft 3",
+      "payStatus": "Pay Status",
+      "note1": "Note 1",
+      "note2": "Note 2",
+      "coalType": "Coal Type",
+      "up_M": "Up M",
+      "up_M1": "Up M 1",
+      "up_M2": "Up M 2",
+      "up_M3": "Up M 3",
+      "up_M4": "Up M 4",
+      "up_A": "Up A",
+      "up_A1": "Up A 1",
+      "up_A2": "Up A 2",
+      "up_A3": "Up A 3",
+      "up_A4": "Up A 4",
+      "up_V": "Up V",
+      "up_V1": "Up V 1",
+      "up_V2": "Up V 2",
+      "up_V3": "Up V 3",
+      "up_V4": "Up V 4",
+      "low_m": "Low M",
+      "low_m1": "Low M 1",
+      "low_m2": "Low M 2",
+      "low_m3": "Low M 3",
+      "low_m4": "Low M 4",
+      "eggCone1": "Egg Cone 1",
+      "eggCone2": "Egg Cone 2",
+      "eggCone3": "Egg Cone 3",
+      "price1": "Price 1",
+      "price2": "Price 2"
+    }
+  }
+}
