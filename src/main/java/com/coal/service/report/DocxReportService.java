@@ -33,9 +33,22 @@ public class DocxReportService {
                         for (CTBookmark bookmark : paragraph.getCTP().getBookmarkStartList()) {
                             key = bookmark.getName();
                         }
-                    }
-                    if (key != null && param.has(key) && param.get(key) != null && !"null".equals(param.get(key).asText())) {
-                        cell.setText(param.get(key).asText());
+                        XWPFRun run = paragraph.createRun();
+                        run.setBold(true);
+                        run.setFontSize(12);
+                        if (
+                            "up_M4".equals(key) ||
+                            "up_A4".equals(key) ||
+                            "up_V4".equals(key) ||
+                            "up_S".equals(key) ||
+                            "report1".equals(key) ||
+                            "report3".equals(key)
+                        ) {
+                            run.setColor("FF0000");
+                        }
+                        if (param.has(key) && param.get(key) != null && !"null".equals(param.get(key).asText())) {
+                            run.setText(param.get(key).asText());
+                        }
                     }
                 }
             }

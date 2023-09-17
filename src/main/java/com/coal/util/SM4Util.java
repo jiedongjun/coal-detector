@@ -1,7 +1,15 @@
 package com.coal.util;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+import static java.time.temporal.ChronoUnit.HOURS;
+
 import cn.hutool.crypto.symmetric.SymmetricCrypto;
 import com.coal.domain.Key;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalUnit;
+import java.util.Date;
 
 public class SM4Util {
 
@@ -21,13 +29,21 @@ public class SM4Util {
 
     public static void main(String[] args) {
         String base64 = SM4Util.deEncrypt(
-            "Vsc1Zn27Do7FJsLxQetw6mQRmImIQVdKjYB+iAtFqxwbabP8HrPQ7bL/pvUWvdi2VaXDArwMzLRfYWL/E/rplrcwftEbJlZWS3+iEmzg4UtkkkL5YH2cvLV0/iVjZSl03+FSYFtjp7twzNGOuvCW7GB2rpBkNI379jP54V9PCFfptsn+cXoLluaVsTeSoEX3"
+            "Ttxx53YdcOGULThli8R6g3SX1CGgN9b0+fiUa6wcwz/A1cxpVWrQDQUhFZ2A2h/xgTUJNM9QjvlBz+o8k9/wWxyPPve+nAnl0QV8s9rE9Ks8K6qly2duZtET1bYW3q75"
         );
         System.out.println(base64);
         Key key1 = ObjectNodeUtil.stringToObj(base64, Key.class);
-        key1.setValidTime(System.currentTimeMillis() + 3600 * 1000 * 1000000);
-        key1.setAuth(ConstantUtil.AUTH);
+        Instant now = Instant.now();
+        System.out.println(now);
+        Instant plus = now.plus(365, DAYS);
+        System.out.println(plus);
+        key1.setValidTime(plus.toEpochMilli());
 
-        System.out.println(SM4Util.encrypt(ObjectNodeUtil.objToString(key1)));
+        Key key2 = new Key();
+        key2.setValidTime(key1.getValidTime());
+        key2.setMacList(key1.getMacList());
+        //        key2.setAuth(ConstantUtil.AUTH);
+
+        System.out.println(SM4Util.encrypt(ObjectNodeUtil.objToString(key2)));
     }
 }

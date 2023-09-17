@@ -35,13 +35,4 @@ public class Key {
     public void setAuth(String auth) {
         this.auth = auth;
     }
-
-    public static void main(String[] args) {
-        String deEncode =
-            "Vsc1Zn27Do7FJsLxQetw6mQRmImIQVdKjYB+iAtFqxwbabP8HrPQ7bL/pvUWvdi2VaXDArwMzLRfYWL/E/rplrcwftEbJlZWS3+iEmzg4UtkkkL5YH2cvLV0/iVjZSl0Khq9W9bcBg2IVbmKwqyuqsPDgI2sf1NCyCrZ2YFcKc0=";
-        String s = SM4Util.deEncrypt(deEncode);
-        Key key = ObjectNodeUtil.stringToObj(s, Key.class);
-        key.setAuth(ConstantUtil.AUTH);
-        System.out.println(SM4Util.encrypt(ObjectNodeUtil.objToString(key)));
-    }
 }
