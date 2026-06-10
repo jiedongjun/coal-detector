@@ -66,8 +66,10 @@ public class KeyController {
         return result;
     }
 
-    @GetMapping("/update_auth")
-    public ObjectNode updateKey(@RequestParam String encode, @RequestParam long validTime) {
+    @PostMapping("/update_auth")
+    public ObjectNode updateKey(@RequestBody ObjectNode param) {
+        String encode = param.get("encode").asText();
+        long validTime = param.get("validTime").asLong();
         String keyStr = SM4Util.deEncrypt(encode);
         Key key = ObjectNodeUtil.stringToObj(keyStr, Key.class);
         key.setValidTime(validTime);

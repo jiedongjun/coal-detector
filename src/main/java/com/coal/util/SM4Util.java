@@ -29,7 +29,7 @@ public class SM4Util {
 
     public static void main(String[] args) {
         String base64 = SM4Util.deEncrypt(
-            "Ttxx53YdcOGULThli8R6g3SX1CGgN9b0+fiUa6wcwz/A1cxpVWrQDQUhFZ2A2h/xgTUJNM9QjvlBz+o8k9/wWxyPPve+nAnl0QV8s9rE9Ks8K6qly2duZtET1bYW3q75"
+            "Vsc1Zn27Do7FJsLxQetw6mQRmImIQVdKjYB+iAtFqxwbabP8HrPQ7bL/pvUWvdi2VaXDArwMzLRfYWL/E/rplrcwftEbJlZWS3+iEmzg4UtkkkL5YH2cvLV0/iVjZSl0v/RwK0ObFRW/3Ry01XYKxc6Vj28GZ+IzsIqAybn8jPLAyZ/myMLL5ACzLTiu21ow"
         );
         System.out.println(base64);
         Key key1 = ObjectNodeUtil.stringToObj(base64, Key.class);
@@ -42,7 +42,7 @@ public class SM4Util {
         Key key2 = new Key();
         key2.setValidTime(key1.getValidTime());
         key2.setMacList(key1.getMacList());
-        //        key2.setAuth(ConstantUtil.AUTH);
+        key2.setAuth(ConstantUtil.AUTH);
 
         System.out.println(SM4Util.encrypt(ObjectNodeUtil.objToString(key2)));
     }

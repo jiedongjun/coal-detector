@@ -6,12 +6,15 @@ import java.io.*;
 import java.util.*;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTBookmark;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
 @Service
 public class DocxReportService {
 
+    private final Logger log = LoggerFactory.getLogger(DocxReportService.class);
     private final ApplicationProperties applicationProperties;
 
     public DocxReportService(ApplicationProperties applicationProperties) {
@@ -33,6 +36,7 @@ public class DocxReportService {
                         for (CTBookmark bookmark : paragraph.getCTP().getBookmarkStartList()) {
                             key = bookmark.getName();
                         }
+                        log.info("书签：{}", key);
                         XWPFRun run = paragraph.createRun();
                         run.setBold(true);
                         run.setFontSize(12);
@@ -42,9 +46,12 @@ public class DocxReportService {
                             "up_V4".equals(key) ||
                             "up_S".equals(key) ||
                             "report1".equals(key) ||
-                            "report3".equals(key)
+                            "report3".equals(key) ||
+                            "eggCone2".equals(key) ||
+                            "report2".equals(key)
                         ) {
                             run.setColor("FF0000");
+                            run.setFontSize(20);
                         }
                         if (param.has(key) && param.get(key) != null && !"null".equals(param.get(key).asText())) {
                             run.setText(param.get(key).asText());

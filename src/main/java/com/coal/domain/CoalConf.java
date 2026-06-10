@@ -162,6 +162,18 @@ public class CoalConf extends AbstractAuditingEntity implements Serializable {
     @Column(name = "up_Vdaf")
     private Float up_Vdaf;
 
+    @Column(name = "s_ar")
+    private Float s_ar;
+
+    @Column(name = "s_d")
+    private Float s_d;
+
+    @Column(name = "fc_d")
+    private Float fc_d;
+
+    @Column(name = "qgr_d")
+    private Float qgr_d;
+
     public Float getUp_S() {
         return up_S;
     }
@@ -727,6 +739,38 @@ public class CoalConf extends AbstractAuditingEntity implements Serializable {
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
+
+    public Float getS_ar() {
+        return s_ar;
+    }
+
+    public void setS_ar(Float s_ar) {
+        this.s_ar = s_ar;
+    }
+
+    public Float getS_d() {
+        return s_d;
+    }
+
+    public void setS_d(Float s_d) {
+        this.s_d = s_d;
+    }
+
+    public Float getFc_d() {
+        return fc_d;
+    }
+
+    public void setFc_d(Float fc_d) {
+        this.fc_d = fc_d;
+    }
+
+    public Float getQgr_d() {
+        return qgr_d;
+    }
+
+    public void setQgr_d(Float qgr_d) {
+        this.qgr_d = qgr_d;
+    }
 
     @Override
     public boolean equals(Object o) {
