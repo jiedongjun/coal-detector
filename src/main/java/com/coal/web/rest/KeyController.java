@@ -1,5 +1,6 @@
 package com.coal.web.rest;
 
+import com.coal.config.ApplicationPathResolver;
 import com.coal.config.ApplicationProperties;
 import com.coal.domain.Key;
 import com.coal.service.KeyService;
@@ -13,7 +14,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import org.apache.commons.io.FileUtils;
-import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -36,9 +36,8 @@ public class KeyController {
     @GetMapping("/auth")
     public ObjectNode getAuth() {
         ObjectNode result = ObjectNodeUtil.createObjectNode().put("auth", false).put("valid", false);
-        String keyPath = applicationProperties.getKeyPath();
         try {
-            File file = ResourceUtils.getFile(keyPath);
+            File file = ApplicationPathResolver.resolveConfiguredPath(getClass(), applicationProperties.getKeyPath());
             if (!file.exists()) {
                 return result;
             }

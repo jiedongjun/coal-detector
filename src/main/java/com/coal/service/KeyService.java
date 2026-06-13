@@ -1,5 +1,6 @@
 package com.coal.service;
 
+import com.coal.config.ApplicationPathResolver;
 import com.coal.config.ApplicationProperties;
 import com.coal.domain.Key;
 import com.coal.util.ObjectNodeUtil;
@@ -17,7 +18,6 @@ import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ResourceUtils;
 
 @Service
 public class KeyService {
@@ -31,9 +31,8 @@ public class KeyService {
 
     @PostConstruct
     private void initKey() {
-        String keyPath = applicationProperties.getKeyPath();
         try {
-            File keyFile = ResourceUtils.getFile(keyPath);
+            File keyFile = ApplicationPathResolver.resolveConfiguredPath(getClass(), applicationProperties.getKeyPath());
             if (!keyFile.exists()) {
                 boolean isCreate = keyFile.createNewFile();
                 log.info("创建密钥文件结果为{}", isCreate);

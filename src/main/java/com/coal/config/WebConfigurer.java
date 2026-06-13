@@ -1,11 +1,5 @@
 package com.coal.config;
 
-import static java.net.URLDecoder.decode;
-
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 import java.util.*;
 import javax.servlet.*;
 import org.slf4j.Logger;
@@ -59,40 +53,24 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
      */
     @Override
     public void customize(WebServerFactory server) {
-        // When running in an IDE or with ./mvnw spring-boot:run, set location of the static web assets.
-        setLocationForStaticAssets(server);
+        if (env.acceptsProfiles(Profiles.of(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT))) {
+            setLocationForStaticAssets(server);
+        }
     }
 
     private void setLocationForStaticAssets(WebServerFactory server) {
-        if (server instanceof ConfigurableServletWebServerFactory) {
-            ConfigurableServletWebServerFactory servletWebServer = (ConfigurableServletWebServerFactory) server;
-            File root;
-            String prefixPath = resolvePathPrefix();
-            root = new File(prefixPath + "target/classes/static/");
-            if (root.exists() && root.isDirectory()) {
-                servletWebServer.setDocumentRoot(root);
-            }
+        if (!(server instanceof ConfigurableServletWebServerFactory)) {
+            return;
         }
-    }
-
-    /**
-     * Resolve path prefix to static resources.
-     */
-    private String resolvePathPrefix() {
-        String fullExecutablePath;
-        try {
-            fullExecutablePath = decode(this.getClass().getResource("").getPath(), StandardCharsets.UTF_8.name());
-        } catch (UnsupportedEncodingException e) {
-            /* try without decoding if this ever happens */
-            fullExecutablePath = this.getClass().getResource("").getPath();
-        }
-        String rootPath = Paths.get(".").toUri().normalize().getPath();
-        String extractedPath = fullExecutablePath.replace(rootPath, "");
-        int extractionEndIndex = extractedPath.indexOf("target/");
-        if (extractionEndIndex <= 0) {
-            return "";
-        }
-        return extractedPath.substring(0, extractionEndIndex);
+        StaticResourcePathResolver
+            .resolveStaticDirectory(getClass())
+            .ifPresent(
+                staticDirectory -> {
+                    ConfigurableServletWebServerFactory servletWebServer = (ConfigurableServletWebServerFactory) server;
+                    servletWebServer.setDocumentRoot(staticDirectory);
+                    log.info("Serving static assets from external directory: {}", staticDirectory.getAbsolutePath());
+                }
+            );
     }
 
     @Bean

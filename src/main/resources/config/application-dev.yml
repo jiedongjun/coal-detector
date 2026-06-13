@@ -21,6 +21,11 @@ logging:
     com.coal: INFO
 
 spring:
+  web:
+    resources:
+      # Dev profile always serves frontend assets from the filesystem (target/classes/static/ or ./static/ next to the JAR),
+      # never from classpath:/static/ inside the packaged JAR.
+      static-locations: []
   devtools:
     restart:
       enabled: true
@@ -105,5 +110,5 @@ jhipster:
 
 application:
   report-template-path: file:./report-template/
-  key-path: file:./secret.key
+  key-path: secret.key
   report-path: file:./report
